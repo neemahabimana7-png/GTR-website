@@ -12,19 +12,18 @@ body{
 font-family:Verdana, Geneva, Tahoma, sans-serif;
 overflow-x:hidden;
 }
-.navbar{
-position:fixed;
-top:20px;
-left:24px;
-right:24px;
-z-index:10;
-padding:14px 0;
-transition: all 0.4s ease-in-out;
-background:#fff;
-box-shadow:0 8px 25px rgba(144, 158, 164, 0.08);
-border-radius:16px;
-width:auto;
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    z-index: 9999;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.08);
 }
+
 .navbar-brand img{
 height:40px;
 transition: transform 0.3s ease;
@@ -45,6 +44,11 @@ transition: all 0.3s ease;
 
 .nav-link:hover{
 color:#C8A24A;
+}
+
+.nav-link.active,
+.nav-link[aria-current="page"]{
+color:#C8A24A !important;
 }
 .contact-btn{
 background:#C8A24A;
@@ -99,6 +103,7 @@ object-fit:cover;
 display:block;
 z-index:0;
 opacity:0;
+will-change: opacity, transform;
 animation:heroSlide 12s infinite ease-in-out;
 }
 
@@ -151,15 +156,11 @@ margin-bottom:40px;
 text-align:justify;
 
 }
-
 .hero-buttons{
-
 display:flex;
 gap:20px;
 flex-wrap:wrap;
-
 }
-
 .btn-primary{
 background:#C8A24A;
 border:none;
@@ -180,9 +181,9 @@ transition: all 0.3s ease;
 border: 2px solid rgba(255,255,255,0.5);
 }
 .btn-outline-light:hover{
-background: rgba(255,255,255,0.1);
-border-color: #C8A24A;
-transform: translateY(-3px);
+background:#fff;
+transform: translateY(-2px);
+box-shadow: 0 10px 20px rgba(200, 162, 74, 0.3);
 }
 
 @keyframes float{
@@ -199,24 +200,20 @@ transform:translateY(0);
 
 @keyframes heroSlide{
 0% {
-opacity: 0;
-transform: translateX(100%);
-}
-10% {
 opacity: 1;
-transform: translateX(0);
+transform: scale(1.01);
 }
-35% {
+32% {
 opacity: 1;
-transform: translateX(0);
+transform: scale(1);
 }
-45% {
+42% {
 opacity: 0;
-transform: translateX(-100%);
+transform: scale(1.015);
 }
 100% {
 opacity: 0;
-transform: translateX(-100%);
+transform: scale(1.02);
 }
 }
 
@@ -275,28 +272,23 @@ transform: scale(1);
 
 /* Animation Utility Classes */
 .fade-up{
-  animation: fadeInUp 0.8s ease-out forwards;
-  opacity: 0;
+  animation: fadeInUp 0.5s ease-out both;
 }
 
 .fade-in{
-  animation: fadeIn 0.8s ease-out forwards;
-  opacity: 0;
+  animation: fadeIn 0.45s ease-out both;
 }
 
 .slide-in-left{
-  animation: slideInLeft 0.8s ease-out forwards;
-  opacity: 0;
+  animation: slideInLeft 0.5s ease-out both;
 }
 
 .slide-in-right{
-  animation: slideInRight 0.8s ease-out forwards;
-  opacity: 0;
+  animation: slideInRight 0.5s ease-out both;
 }
 
 .scale-in{
-  animation: scaleIn 0.8s ease-out forwards;
-  opacity: 0;
+  animation: scaleIn 0.45s ease-out both;
 }
 
 /* RESPONSIVE */
@@ -433,16 +425,7 @@ transform: scale(1);
   box-shadow: 0 22px 55px rgba(23, 43, 77, 0.06);
   border: 1px solid rgba(220, 154, 0, 0.12);
   transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
-  animation: fadeInUp 0.6s ease-out forwards;
-  opacity: 0;
 }
-
-.choose-card:nth-child(1){animation-delay: 0.1s;}
-.choose-card:nth-child(2){animation-delay: 0.2s;}
-.choose-card:nth-child(3){animation-delay: 0.3s;}
-.choose-card:nth-child(4){animation-delay: 0.1s;}
-.choose-card:nth-child(5){animation-delay: 0.2s;}
-.choose-card:nth-child(6){animation-delay: 0.3s;}
 
 .choose-card:hover{
   transform: translateY(-12px);
@@ -639,7 +622,7 @@ ABOUT
 .about-label{
   display:inline-block;
   font-family:Poppins;
-  font-size:15px;
+  font-size:16px;
   font-weight:700;
   letter-spacing:1px;
   color:#C8A24A;
@@ -725,7 +708,7 @@ ABOUT
     background: #C8A24A;
     color: white;
     text-decoration: none;
-    font-size: 15px;
+    font-size: 16px;
     padding: 18px 28px;
     border-radius: 50px;
     font-weight: 600;
@@ -950,17 +933,7 @@ padding:35px;
 
     box-shadow:0 12px 30px rgba(0,0,0,.08);
 
-    animation: scaleIn 0.6s ease-out forwards;
-    opacity: 0;
-
 }
-
-.service-card:nth-child(1){animation-delay: 0.1s;}
-.service-card:nth-child(2){animation-delay: 0.2s;}
-.service-card:nth-child(3){animation-delay: 0.3s;}
-.service-card:nth-child(4){animation-delay: 0.1s;}
-.service-card:nth-child(5){animation-delay: 0.2s;}
-.service-card:nth-child(6){animation-delay: 0.3s;}
 
 .service-card img{
 
@@ -1291,7 +1264,7 @@ FOOTER
 ================================*/
 
 .footer{
- height:65vh;
+   height:65vh;
 
     background:#111111;
 
@@ -1526,14 +1499,14 @@ height:40px;
 
 .cta-btn-primary{
     background: #C8A24A;
-    color: #111;
+    color: #fff;
 }
 
 .cta-btn-primary:hover{
-    background: #e2bd67;
-    color: #111;
-    transform: translateY(-3px);
-    box-shadow: 0 15px 35px rgba(200, 162, 74, 0.4);
+  background:#D4AF37;
+color:white;
+transform: translateY(-2px);
+box-shadow: 0 10px 20px rgba(200, 162, 74, 0.3);
 }
 
 .cta-btn-secondary{
@@ -1543,11 +1516,39 @@ height:40px;
 }
 
 .cta-btn-secondary:hover{
-    background: rgba(255, 255, 255, 0.15);
-    color: #C8A24A;
-    border-color: #C8A24A;
-    transform: translateY(-3px);
-    box-shadow: 0 15px 35px rgba(200, 162, 74, 0.2);
+background:#fff;
+color:#333;
+transform: translateY(-2px);
+box-shadow: 0 10px 20px rgba(200, 162, 74, 0.3);
+}
+
+/* Scroll flow system */
+body.js-reveal .animate-section,
+body.js-reveal .choose-card,
+body.js-reveal .service-card,
+body.js-reveal .cta-box {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.55s ease, transform 0.55s ease;
+}
+
+body.js-reveal .choose-card,
+body.js-reveal .service-card {
+  transition-duration: 0.5s;
+}
+
+body.js-reveal .is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
 
 /*==============================
@@ -1569,7 +1570,8 @@ Responsive
 @media(max-width:768px){
 
 .footer{
-
+height:100%;
+background:#111111;
 text-align:center;
 
 }
