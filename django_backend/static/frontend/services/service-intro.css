@@ -1,0 +1,225 @@
+/* Shared visual treatment for the opening section on every service detail page. */
+.export-about,
+.about-service {
+  font-family: 'Poppins', sans-serif;
+  background: #fff;
+}
+
+.export-about > .container > .row,
+.about-service > .container > .row {
+	align-items: stretch !important;
+}
+
+.export-about > .container > .row > .col-lg-7,
+.about-service > .container > .row > .col-lg-7 {
+  display: flex;
+  flex-direction: column;
+}
+
+.export-about > .container > .row > .col-lg-5,
+.about-service > .container > .row > .col-lg-5 {
+  display: flex;
+}
+
+.export-about .export-image-card,
+.about-service .about-image-wrap {
+	position: relative;
+	width: 100%;
+	flex: 1;
+	min-height: 0;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.12);
+}
+
+.back-up-button {
+	position: absolute;
+	top: 20px;
+	left: 20px;
+	z-index: 5;
+	display: inline-flex;
+	align-items: center;
+	gap: 10px;
+	padding: 10px 18px;
+	border: 0;
+	border-radius: 999px;
+	background: #c8a24a;
+	color: #fff;
+	text-decoration: none;
+	font: 600 15px 'Poppins', sans-serif;
+	cursor: pointer;
+	transition: background-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.back-up-button:hover {
+	background: #B88F37;
+	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.24);
+	transform: translateY(-2px);
+}
+
+.back-up-button:focus-visible {
+	outline: 3px solid #fff;
+	outline-offset: 3px;
+}
+
+.back-up-button span:first-child {
+	font-size: 24px;
+	line-height: 1;
+}
+
+.export-about .export-image-card img,
+.about-service .about-image-wrap img {
+	position: absolute;
+	inset: 0;
+	display: block;
+	width: 100%;
+	height: 100%;
+  object-fit: cover;
+}
+
+.export-about .section-kicker,
+.about-service .section-kicker {
+  display: inline-block;
+  margin-bottom: 10px;
+  color: #c8a24a;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  letter-spacing: 2px;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+.export-about .card-line,
+.about-service .trading-line {
+  width: 112px;
+  height: 3px;
+  margin: 12px 0 26px 12px;
+  border-radius: 999px;
+  background: #c8a24a;
+}
+
+.export-about .export-intro,
+.about-service > .container > .row > div > p {
+  margin-bottom: 24px;
+  color: #333;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  line-height: 2.1;
+  text-align: justify;
+}
+
+.export-about .export-feature-grid,
+.about-service .icon-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 0;
+  flex: 1;
+}
+
+.export-about .feature-item-card,
+.about-service .icon-card {
+  min-width: 0;
+  padding: 20px;
+  border: 1px solid #e5e5e5;
+  border-radius: 18px;
+  background: #fff;
+  box-shadow: none;
+  font-family: 'Poppins', sans-serif;
+  transition: border-color 0.25s ease, transform 0.25s ease;
+}
+
+.export-about .feature-item-icon,
+.about-service .icon-card > i {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: auto;
+  height: auto;
+  margin: 0 0 14px;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: #c8a24a;
+  font-size: 26px;
+}
+
+.export-about .feature-item-card h3,
+.about-service .icon-card h3 {
+  margin-bottom: 8px;
+  color: #111;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+}
+
+.export-about .feature-item-card p,
+.about-service .icon-card p {
+  margin: 0;
+  color: #444;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.75;
+}
+
+.export-about .feature-item-card:hover,
+.about-service .icon-card:hover {
+  border-color: rgba(200, 162, 74, 0.55);
+  box-shadow: none;
+  transform: translateY(-3px);
+}
+
+/* Keep the partnership network photo compact despite the shared export styles. */
+.overview-image-card img {
+  height: 380px;
+  min-height: 0;
+  object-fit: cover;
+}
+
+@media (max-width: 991.98px) {
+  .export-about .export-image-card,
+  .about-service .about-image-wrap {
+    height: clamp(340px, 65vw, 520px);
+  }
+}
+
+@media (max-width: 575.98px) {
+	.back-up-button {
+		top: 12px;
+		left: 12px;
+		gap: 8px;
+		padding: 9px 15px;
+		font-size: 14px;
+	}
+
+	.back-up-button span:first-child {
+		font-size: 21px;
+	}
+
+  .export-about .export-feature-grid,
+  .about-service .icon-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .export-about .export-intro,
+  .about-service > .container > .row > div > p {
+    line-height: 1.85;
+    text-align: left;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .overview-image-card img {
+    height: clamp(260px, 70vw, 360px);
+  }
+}
+
+/* Keep all service detail content visible when optional reveal scripts fail. */
+body.services-page .animate-section,
+body.mineral-page .animate-section,
+body.services-page [data-aos],
+body.mineral-page [data-aos],
+body.mineral-page .section-fade,
+body.mineral-page .timeline-step {
+    opacity: 1 !important;
+    transform: none !important;
+}

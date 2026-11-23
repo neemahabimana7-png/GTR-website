@@ -1,0 +1,562 @@
+[
+  {
+    "path": ".env.example",
+    "bytes": 852
+  },
+  {
+    "path": ".gitignore",
+    "bytes": 75
+  },
+  {
+    "path": "CHANGELOG.md",
+    "bytes": 917
+  },
+  {
+    "path": "manage.py",
+    "bytes": 334
+  },
+  {
+    "path": "README.md",
+    "bytes": 2885
+  },
+  {
+    "path": "start-local.cmd",
+    "bytes": 218
+  },
+  {
+    "path": "config/asgi.py",
+    "bytes": 175
+  },
+  {
+    "path": "config/environment.py",
+    "bytes": 1397
+  },
+  {
+    "path": "config/urls.py",
+    "bytes": 215
+  },
+  {
+    "path": "config/wsgi.py",
+    "bytes": 175
+  },
+  {
+    "path": "config/__init__.py",
+    "bytes": 1
+  },
+  {
+    "path": "docs/ADMIN_GUIDE.md",
+    "bytes": 2490
+  },
+  {
+    "path": "docs/ARCHITECTURE.md",
+    "bytes": 2909
+  },
+  {
+    "path": "docs/BACKUP-LOCATION.txt",
+    "bytes": 160
+  },
+  {
+    "path": "docs/DATABASE.md",
+    "bytes": 3185
+  },
+  {
+    "path": "docs/DEPLOYMENT.md",
+    "bytes": 3917
+  },
+  {
+    "path": "docs/FILES-CREATED.json",
+    "bytes": 11708
+  },
+  {
+    "path": "docs/final-check-results.json",
+    "bytes": 3223
+  },
+  {
+    "path": "docs/frontend-inventory.json",
+    "bytes": 2756
+  },
+  {
+    "path": "docs/frontend-original-manifest.json",
+    "bytes": 461230
+  },
+  {
+    "path": "docs/FRONTEND-PRESERVATION.md",
+    "bytes": 2751
+  },
+  {
+    "path": "docs/frontend-verification.json",
+    "bytes": 1667
+  },
+  {
+    "path": "docs/HANDOVER.md",
+    "bytes": 4920
+  },
+  {
+    "path": "docs/http-smoke-results.json",
+    "bytes": 2722
+  },
+  {
+    "path": "docs/SECURITY.md",
+    "bytes": 3369
+  },
+  {
+    "path": "docs/SETUP.md",
+    "bytes": 3133
+  },
+  {
+    "path": "docs/template-conversion-report.json",
+    "bytes": 386
+  },
+  {
+    "path": "docs/TESTING.md",
+    "bytes": 3256
+  },
+  {
+    "path": "inquiries/admin.py",
+    "bytes": 1155
+  },
+  {
+    "path": "inquiries/forms.py",
+    "bytes": 1559
+  },
+  {
+    "path": "inquiries/middleware.py",
+    "bytes": 754
+  },
+  {
+    "path": "inquiries/models.py",
+    "bytes": 1896
+  },
+  {
+    "path": "inquiries/security.py",
+    "bytes": 947
+  },
+  {
+    "path": "inquiries/services.py",
+    "bytes": 1913
+  },
+  {
+    "path": "inquiries/tests.py",
+    "bytes": 8500
+  },
+  {
+    "path": "inquiries/urls.py",
+    "bytes": 129
+  },
+  {
+    "path": "inquiries/views.py",
+    "bytes": 1656
+  },
+  {
+    "path": "inquiries/__init__.py",
+    "bytes": 1
+  },
+  {
+    "path": "requirements/base.txt",
+    "bytes": 15
+  },
+  {
+    "path": "requirements/locked-windows-py312.txt",
+    "bytes": 149
+  },
+  {
+    "path": "requirements/production.txt",
+    "bytes": 51
+  },
+  {
+    "path": "scripts/verify_frontend.py",
+    "bytes": 5416
+  },
+  {
+    "path": "templates/base.html",
+    "bytes": 216
+  },
+  {
+    "path": "website/pages.py",
+    "bytes": 1257
+  },
+  {
+    "path": "website/tests.py",
+    "bytes": 3508
+  },
+  {
+    "path": "website/urls.py",
+    "bytes": 502
+  },
+  {
+    "path": "website/views.py",
+    "bytes": 218
+  },
+  {
+    "path": "website/__init__.py",
+    "bytes": 1
+  },
+  {
+    "path": "config/settings/base.py",
+    "bytes": 3257
+  },
+  {
+    "path": "config/settings/development.py",
+    "bytes": 1092
+  },
+  {
+    "path": "config/settings/production.py",
+    "bytes": 1626
+  },
+  {
+    "path": "config/settings/__init__.py",
+    "bytes": 1
+  },
+  {
+    "path": "docs/learning/01-DJANGO-INTRODUCTION.md",
+    "bytes": 2500
+  },
+  {
+    "path": "docs/learning/02-PROJECT-STRUCTURE.md",
+    "bytes": 2772
+  },
+  {
+    "path": "docs/learning/03-URLS-AND-VIEWS.md",
+    "bytes": 2408
+  },
+  {
+    "path": "docs/learning/04-TEMPLATES-AND-STATIC-FILES.md",
+    "bytes": 2686
+  },
+  {
+    "path": "docs/learning/05-MODELS-AND-DATABASE.md",
+    "bytes": 2701
+  },
+  {
+    "path": "docs/learning/06-FORMS-AND-VALIDATION.md",
+    "bytes": 2722
+  },
+  {
+    "path": "docs/learning/07-DJANGO-ADMIN.md",
+    "bytes": 2526
+  },
+  {
+    "path": "docs/learning/08-EMAIL-INTEGRATION.md",
+    "bytes": 2617
+  },
+  {
+    "path": "docs/learning/09-SECURITY.md",
+    "bytes": 2675
+  },
+  {
+    "path": "docs/learning/10-TESTING-AND-DEBUGGING.md",
+    "bytes": 2639
+  },
+  {
+    "path": "docs/learning/11-DEPLOYMENT.md",
+    "bytes": 2699
+  },
+  {
+    "path": "docs/learning/CODE-WALKTHROUGH.md",
+    "bytes": 18649
+  },
+  {
+    "path": "docs/learning/DJANGO-COMMANDS.md",
+    "bytes": 5956
+  },
+  {
+    "path": "docs/learning/IMPLEMENTATION-JOURNAL.md",
+    "bytes": 5931
+  },
+  {
+    "path": "docs/learning/README.md",
+    "bytes": 1162
+  },
+  {
+    "path": "inquiries/management/__init__.py",
+    "bytes": 1
+  },
+  {
+    "path": "inquiries/migrations/0001_initial.py",
+    "bytes": 2330
+  },
+  {
+    "path": "inquiries/migrations/__init__.py",
+    "bytes": 1
+  },
+  {
+    "path": "inquiries/management/commands/cleanup_rate_limits.py",
+    "bytes": 435
+  },
+  {
+    "path": "inquiries/management/commands/retry_notifications.py",
+    "bytes": 1092
+  },
+  {
+    "path": "inquiries/management/commands/__init__.py",
+    "bytes": 1
+  },
+  {
+    "path": "static/frontend/about.css",
+    "bytes": 11640
+  },
+  {
+    "path": "static/frontend/contact.css",
+    "bytes": 8761
+  },
+  {
+    "path": "static/frontend/grittech.css",
+    "bytes": 35054
+  },
+  {
+    "path": "static/frontend/dist/tailwind.css",
+    "bytes": 1
+  },
+  {
+    "path": "static/frontend/images/coltan.jpeg",
+    "bytes": 200926
+  },
+  {
+    "path": "static/frontend/images/copper.jpeg",
+    "bytes": 243544
+  },
+  {
+    "path": "static/frontend/images/copper.png",
+    "bytes": 2560572
+  },
+  {
+    "path": "static/frontend/images/Gold Nugget Mineral Inspection Lab-2.png",
+    "bytes": 2283807
+  },
+  {
+    "path": "static/frontend/images/Gold.avif",
+    "bytes": 131719
+  },
+  {
+    "path": "static/frontend/images/Golden Ore and 3T Minerals-1.png",
+    "bytes": 2331989
+  },
+  {
+    "path": "static/frontend/images/Grittech Logo.png",
+    "bytes": 54012
+  },
+  {
+    "path": "static/frontend/images/Iron ore.jpeg",
+    "bytes": 368893
+  },
+  {
+    "path": "static/frontend/images/Lithium.jpeg",
+    "bytes": 387198
+  },
+  {
+    "path": "static/frontend/images/Manganese.jpeg",
+    "bytes": 210958
+  },
+  {
+    "path": "static/frontend/images/minerals photo.jpg",
+    "bytes": 29415
+  },
+  {
+    "path": "static/frontend/images/pexels-alesiakozik-6770610.jpg",
+    "bytes": 1612754
+  },
+  {
+    "path": "static/frontend/images/pexels-jonathanborba-14354109.jpg",
+    "bytes": 1637843
+  },
+  {
+    "path": "static/frontend/images/pexels-volker-braun-2149703592-33122152.jpg",
+    "bytes": 11366491
+  },
+  {
+    "path": "static/frontend/images/Platinum.jpeg",
+    "bytes": 287935
+  },
+  {
+    "path": "static/frontend/images/silver.png",
+    "bytes": 2914208
+  },
+  {
+    "path": "static/frontend/images/Team picture.avif",
+    "bytes": 754277
+  },
+  {
+    "path": "static/frontend/images/Tin ore.jpeg",
+    "bytes": 73482
+  },
+  {
+    "path": "static/frontend/images/Tin.PNG",
+    "bytes": 203347
+  },
+  {
+    "path": "static/frontend/images/Warm Office Handshake.png",
+    "bytes": 1712831
+  },
+  {
+    "path": "static/frontend/images/zinc.jpeg",
+    "bytes": 290986
+  },
+  {
+    "path": "static/frontend/services/service-intro.css",
+    "bytes": 4735
+  },
+  {
+    "path": "static/frontend/services/service.css",
+    "bytes": 10074
+  },
+  {
+    "path": "static/frontend/src/tailwind.css",
+    "bytes": 21
+  },
+  {
+    "path": "static/frontend/services/services-details-/services-details-partner.css",
+    "bytes": 10909
+  },
+  {
+    "path": "static/frontend/services/services-details-export/service-details-export.css",
+    "bytes": 13074
+  },
+  {
+    "path": "static/frontend/services/services-details-globalmarket/services-details-globalmark.css",
+    "bytes": 11034
+  },
+  {
+    "path": "static/frontend/services/services-details-mineralTrading/serviceMineralTrading.css",
+    "bytes": 12074
+  },
+  {
+    "path": "static/frontend/services/services-details-parternship/services-details-partner.css",
+    "bytes": 14101
+  },
+  {
+    "path": "static/frontend/services/services-details-quality/services-details-quality.css",
+    "bytes": 12808
+  },
+  {
+    "path": "static/frontend/services/services-details-supply/services-details-supply.css",
+    "bytes": 12683
+  },
+  {
+    "path": "static/frontend/services/services-details-traceability/services-details-traceability.css",
+    "bytes": 13109
+  },
+  {
+    "path": "templates/emails/inquiry.txt",
+    "bytes": 368
+  },
+  {
+    "path": "templates/includes/footer_2a8a5fc3cb56.html",
+    "bytes": 3626
+  },
+  {
+    "path": "templates/includes/footer_6f32c06a6cb1.html",
+    "bytes": 2983
+  },
+  {
+    "path": "templates/includes/footer_7bcf35135222.html",
+    "bytes": 2185
+  },
+  {
+    "path": "templates/includes/footer_8e9eb30e3920.html",
+    "bytes": 2122
+  },
+  {
+    "path": "templates/includes/footer_94210a16db83.html",
+    "bytes": 2733
+  },
+  {
+    "path": "templates/includes/footer_9d4746857263.html",
+    "bytes": 2175
+  },
+  {
+    "path": "templates/includes/footer_a23db9c17914.html",
+    "bytes": 2050
+  },
+  {
+    "path": "templates/includes/footer_a781d6980e13.html",
+    "bytes": 3601
+  },
+  {
+    "path": "templates/includes/footer_b72385b81705.html",
+    "bytes": 2021
+  },
+  {
+    "path": "templates/includes/footer_f69b82a3ee61.html",
+    "bytes": 2381
+  },
+  {
+    "path": "templates/includes/nav_2ab696685d73.html",
+    "bytes": 1391
+  },
+  {
+    "path": "templates/includes/nav_591428b52d02.html",
+    "bytes": 1236
+  },
+  {
+    "path": "templates/includes/nav_9805244aa0bd.html",
+    "bytes": 1176
+  },
+  {
+    "path": "templates/includes/nav_ab65faac36c5.html",
+    "bytes": 1228
+  },
+  {
+    "path": "templates/includes/nav_afd4a00f192e.html",
+    "bytes": 1228
+  },
+  {
+    "path": "templates/includes/nav_c0b7390b3e6e.html",
+    "bytes": 1228
+  },
+  {
+    "path": "templates/inquiries/field_errors.html",
+    "bytes": 172
+  },
+  {
+    "path": "templates/inquiries/form_feedback.html",
+    "bytes": 228
+  },
+  {
+    "path": "templates/pages/about.html",
+    "bytes": 11249
+  },
+  {
+    "path": "templates/pages/contact.html",
+    "bytes": 7965
+  },
+  {
+    "path": "templates/pages/grittech.html",
+    "bytes": 15295
+  },
+  {
+    "path": "templates/pages/services/service.html",
+    "bytes": 15010
+  },
+  {
+    "path": "templates/pages/services/services-details-/services-details-partner.html",
+    "bytes": 14809
+  },
+  {
+    "path": "templates/pages/services/services-details-export/service-details-export.html",
+    "bytes": 10601
+  },
+  {
+    "path": "templates/pages/services/services-details-globalmarket/services-details-globalmark.html",
+    "bytes": 12888
+  },
+  {
+    "path": "templates/pages/services/services-details-mineralTrading/serviceMineralTrading.html",
+    "bytes": 12597
+  },
+  {
+    "path": "templates/pages/services/services-details-parternship/services-details-partner.html",
+    "bytes": 15850
+  },
+  {
+    "path": "templates/pages/services/services-details-quality/services-details-quality.html",
+    "bytes": 9961
+  },
+  {
+    "path": "templates/pages/services/services-details-supply/services-details-supply.html",
+    "bytes": 10343
+  },
+  {
+    "path": "templates/pages/services/services-details-traceability/services-details-traceability.html",
+    "bytes": 10135
+  }
+]

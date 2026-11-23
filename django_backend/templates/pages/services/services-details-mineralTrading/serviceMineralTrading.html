@@ -1,0 +1,300 @@
+{% extends "base.html" %}{% load static %}{% block document %}<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Gold &amp; 3T Mineral Sourcing - Grittech Resources</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+	<link
+		href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" href="{% static 'frontend/grittech.css' %}">
+	<link rel="stylesheet" href="{% static 'frontend/services/service.css' %}">
+	<link rel="stylesheet" href="{% static 'frontend/services/services-details-mineralTrading/serviceMineralTrading.css' %}">
+  <link rel="stylesheet" href="{% static 'frontend/dist/tailwind.css' %}">
+	<link rel="stylesheet" href="{% static 'frontend/services/service-intro.css' %}">
+  </head>
+
+<body class="mineral-page">
+
+	
+  
+  {% include 'includes/nav_ab65faac36c5.html' %}
+
+	<main>
+
+		<section class="about-service section-fade">
+			<div class="container">
+				<div class="row align-items-center g-4 g-lg-5">
+					<div class="col-lg-5">
+						<div class="about-image-wrap">
+							<a class="back-up-button" href="{% url 'website:services' %}" aria-label="Back to services">
+								<span aria-hidden="true">&#8592;</span>
+								<span>Go back</span>
+							</a>
+							<img src="https://images.pexels.com/photos/3861438/pexels-photo-3861438.jpeg?_gl=1*520egp*_ga*NDI5OTc4MTczLjE3Nzc1NTU0ODI.*_ga_8JE65Q40S6*czE3ODQyMTQ2OTckbzIzJGcxJHQxNzg0MjE1NDQ4JGo0NSRsMCRoMA.."
+								alt="Mineral processing operation" class="img-fluid">
+						</div>
+					</div>
+					<div class="col-lg-7">
+						<span class="section-kicker">ABOUT OUR MINERAL SOURCING SERVICE</span>
+						<div class="trading-line"></div>
+						<!--<h2>Reliable Supply.<br>Responsible Sourcing.<br>Global Impact.</h2>-->
+						<p>Grittech Resources Ltd specializes in sourcing Gold and 3T minerals—Tin, Tantalum, and Tungsten. Through responsible sourcing, transparent trading practices, and strategic partnerships, we connect mineral suppliers with customers and support reliable mineral supply.</p>
+						<div class="icon-grid">
+							<article class="icon-card">
+								<i class="bi bi-shield-check"></i>
+								<h3>Responsible Sourcing</h3>
+								<p>Building reliable relationships with mineral suppliers.</p>
+							</article>
+							<article class="icon-card" id="quality-specifications" style="scroll-margin-top: 110px;">
+								<i class="bi bi-patch-check"></i>
+								<h3>Quality &amp; Specifications</h3>
+								<p>Sourcing minerals according to customer requirements and specifications.</p>
+							</article>
+							<article class="icon-card">
+								<i class="bi bi-globe2"></i>
+								<h3>Market Connections</h3>
+								<p>Connecting mineral suppliers with international buyers.</p>
+							</article>
+							<article class="icon-card">
+								<i class="bi bi-truck"></i>
+								<h3>Supply Coordination</h3>
+								<p>Supporting efficient sourcing arrangements and reliable mineral supply.</p>
+							</article>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="minerals-trade section-fade">
+            <div class="container">
+                <div class="section-heading text-center">
+                    <span class="section-kicker">OUR CORE MINERAL PORTFOLIO</span>
+                    <div class="card-line"></div>
+                    <!--<p>Focused on <strong>Gold</strong> and <strong>3T</strong> minerals.</p>-->
+                </div>
+                <div class="row g-4">
+                    <div class="col-lg-3 col-md-6">
+                        <article class="mineral-card">
+                            <img src="{% static 'frontend/images/Gold.avif' %}" alt="Gold mineral">
+                            <div class="mineral-overlay">
+                                <h3>Gold (Au)</h3>
+                                <p>A precious metal widely used in jewelry, investment, electronics, and industry.</p>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <article class="mineral-card">
+                            <img src="https://images.pexels.com/photos/2363901/pexels-photo-2363901.jpeg?_gl=1*r7coev*_ga*NDI5OTc4MTczLjE3Nzc1NTU0ODI.*_ga_8JE65Q40S6*czE3ODQyODUzMDgkbzI1JGcxJHQxNzg0Mjg1MzE5JGo0OSRsMCRoMA.." alt="Tin ore rocks">
+                            <div class="mineral-overlay">
+                                <h3>Tin (Sn)</h3>
+                                <p>Extracted from cassiterite and used in soldering, electronics, and metal coatings.</p>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <article class="mineral-card">
+                            <img src="{% static 'frontend/images/coltan.jpeg' %}" alt="Coltan ore containing tantalum">
+                            <div class="mineral-overlay">
+                                <h3>Tantalum (Ta)</h3>
+                                <p>Obtained from coltan and used in electronic capacitors, smartphones, and aerospace components.</p>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <article class="mineral-card">
+                            <img src="https://media.istockphoto.com/id/1638264348/photo/99-95-fine-tungsten.jpg?s=2048x2048&w=is&k=20&c=6LYxdIXLo2-YJf9923nITnth0lXoLNjpn8eiiZHVH7g=" alt="Wolfram tungsten ore">
+                            <div class="mineral-overlay">
+                                <h3>Tungsten (W)</h3>
+                                <p>Extracted from wolframite and used in cutting tools, heavy machinery, and high-temperature applications.</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="trading-process section-fade">
+			<div class="container">
+				<div class="section-head text-center">
+					<span class="section-kicker">OUR PROCESS</span>
+					<div class="trading-line"></div>
+					<h2 class="section-title">From Supplier to <span class="title-accent">International Buyer</span></h2>
+				</div>
+				<div class="timeline-track">
+					<div class="timeline-progress"></div>
+					<article class="timeline-step">
+						<span class="step-dot">01</span>
+						<i class="bi bi-search"></i>
+						<h3>Source</h3>
+						<p>We partner with licensed and verified mining operators.</p>
+					</article>
+					<article class="timeline-step">
+						<span class="step-dot">02</span>
+						<i class="bi bi-clipboard-check"></i>
+						<h3>Inspection</h3>
+						<p>Rigorous quality inspections and testing for every shipment.</p>
+					</article>
+					<article class="timeline-step">
+						<span class="step-dot">03</span>
+						<i class="bi bi-file-earmark-text"></i>
+						<h3>Documentation</h3>
+						<p>Complete export paperwork and regulatory compliance.</p>
+					</article>
+					<article class="timeline-step">
+						<span class="step-dot">04</span>
+						<i class="bi bi-truck"></i>
+						<h3>Logistics</h3>
+						<p>Secure transportation and global shipping coordination.</p>
+					</article>
+					<article class="timeline-step">
+						<span class="step-dot">05</span>
+						<i class="bi bi-box-seam"></i>
+						<h3>Delivery</h3>
+						<p>Safe and on-time delivery to our clients worldwide.</p>
+					</article>
+				</div>
+			</div>
+		</section>
+
+		<section class="why-grittech section-fade">
+			<div class="container">
+				<div class="section-heading text-center">
+					<h2>Why Choose GRITTECH For <span class="title-accent">Gold &amp; 3T Mineral Sourcing</span></h2>
+				</div>
+				<div class="row g-4">
+					<div class="col-lg-4 col-md-6">
+						<article class="feature-card"><i class="bi bi-person-check"></i>
+							<h3>Trusted Suppliers</h3>
+							<p>Strong relationships with reliable and compliant mining partners.</p>
+						</article>
+					</div>
+					<div class="col-lg-4 col-md-6">
+						<article class="feature-card"><i class="bi bi-award"></i>
+							<h3>International Standards</h3>
+							<p>We follow global best practices and quality standards.</p>
+						</article>
+					</div>
+					<div class="col-lg-4 col-md-6">
+						<article class="feature-card"><i class="bi bi-currency-dollar"></i>
+							<h3>Competitive Pricing</h3>
+							<p>Complete-driven pricing that delivers real value.</p>
+						</article>
+					</div>
+					<div class="col-lg-4 col-md-6">
+						<article class="feature-card"><i class="bi bi-leaf"></i>
+							<h3>Ethical &amp; Sustainable</h3>
+							<p>Committed to responsible sourcing and sustainable operations.</p>
+						</article>
+					</div>
+					<div class="col-lg-4 col-md-6">
+						<article class="feature-card"><i class="bi bi-lightning-charge"></i>
+							<h3>Fast Delivery</h3>
+							<p>Efficient logistics ensuring timely deliveries worldwide.</p>
+						</article>
+					</div>
+					<div class="col-lg-4 col-md-6">
+						<article class="feature-card"><i class="bi bi-globe"></i>
+							<h3>Global Network</h3>
+							<p>Expanding network across regional and international markets.</p>
+						</article>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="stats-section section-fade">
+			<div class="stats-overlay"></div>
+			<div class="container position-relative">
+				<div class="row g-4">
+					<div class="col-lg-3 col-md-6">
+						<article class="stat-card">
+							<div class="stat-main">
+								<i class="fa-solid fa-users stat-icon" aria-hidden="true"></i>
+								<h3><span class="counter" data-target="50">50</span>+</h3>
+							</div>
+							<p>Verified Suppliers</p>
+						</article>
+					</div>
+					<div class="col-lg-3 col-md-6">
+						<article class="stat-card">
+							<div class="stat-main">
+								<i class="fa-solid fa-globe stat-icon" aria-hidden="true"></i>
+								<h3><span class="counter" data-target="20">20</span>+</h3>
+							</div>
+							<p>Trading Partners</p>
+						</article>
+					</div>
+					<div class="col-lg-3 col-md-6">
+						<article class="stat-card">
+							<div class="stat-main">
+								<i class="fa-solid fa-shield-alt stat-icon" aria-hidden="true"></i>
+								<h3><span class="counter" data-target="100">100</span>%</h3>
+							</div>
+							<p>Quality Inspection</p>
+						</article>
+					</div>
+					<div class="col-lg-3 col-md-6">
+						<article class="stat-card">
+							<div class="stat-main">
+								<i class="fa-solid fa-headset stat-icon" aria-hidden="true"></i>
+								<h3><span class="counter" data-target="24">24</span>/7</h3>
+							</div>
+							<p>Customer Support</p>
+						</article>
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+
+		{% include 'includes/footer_9d4746857263.html' %}
+	</main>
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+	<script>
+		// Animate the statistics when they enter view; the HTML keeps the final values visible without JS.
+		(() => {
+			const counters = document.querySelectorAll('.stats-section .counter[data-target]');
+			const animateCounter = (counter) => {
+				if (counter.dataset.counted === 'true') return;
+				counter.dataset.counted = 'true';
+				const target = Number(counter.dataset.target);
+				const duration = 1400;
+				const start = performance.now();
+				counter.textContent = '0';
+				const tick = (now) => {
+					const progress = Math.min((now - start) / duration, 1);
+					const eased = 1 - Math.pow(1 - progress, 3);
+					counter.textContent = String(Math.round(target * eased));
+					if (progress < 1) requestAnimationFrame(tick);
+				};
+				requestAnimationFrame(tick);
+			};
+
+			if ('IntersectionObserver' in window) {
+				const observer = new IntersectionObserver((entries) => {
+					entries.forEach((entry) => {
+						if (entry.isIntersecting) {
+							animateCounter(entry.target);
+							observer.unobserve(entry.target);
+						}
+					});
+				}, { threshold: 0.35 });
+				counters.forEach((counter) => observer.observe(counter));
+			} else {
+				counters.forEach(animateCounter);
+			}
+		})();
+	</script>
+
+</body>
+
+</html>
+{% endblock %}

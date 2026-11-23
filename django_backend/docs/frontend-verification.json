@@ -1,0 +1,81 @@
+{
+  "original_files_checked": 2675,
+  "original_changes": [],
+  "static_copies_checked": 36,
+  "static_changes": [],
+  "pages": [
+    {
+      "page": "home",
+      "status": 200,
+      "dom_equal": true,
+      "inline_js_equal": true
+    },
+    {
+      "page": "about",
+      "status": 200,
+      "dom_equal": true,
+      "inline_js_equal": true
+    },
+    {
+      "page": "services",
+      "status": 200,
+      "dom_equal": true,
+      "inline_js_equal": true
+    },
+    {
+      "page": "sourcing",
+      "status": 200,
+      "dom_equal": true,
+      "inline_js_equal": true
+    },
+    {
+      "page": "trading",
+      "status": 200,
+      "dom_equal": true,
+      "inline_js_equal": true
+    },
+    {
+      "page": "supply",
+      "status": 200,
+      "dom_equal": true,
+      "inline_js_equal": true
+    },
+    {
+      "page": "quality",
+      "status": 200,
+      "dom_equal": true,
+      "inline_js_equal": true
+    },
+    {
+      "page": "traceability",
+      "status": 200,
+      "dom_equal": true,
+      "inline_js_equal": true
+    },
+    {
+      "page": "markets",
+      "status": 200,
+      "dom_equal": true,
+      "inline_js_equal": true
+    },
+    {
+      "page": "partnerships",
+      "status": 200,
+      "dom_equal": true,
+      "inline_js_equal": true
+    },
+    {
+      "page": "partnerships-alternative",
+      "status": 200,
+      "dom_equal": true,
+      "inline_js_equal": true
+    },
+    {
+      "page": "contact",
+      "status": 200,
+      "dom_equal": true,
+      "inline_js_equal": true
+    }
+  ],
+  "browser_pixel_comparison": "not performed by this script"
+}

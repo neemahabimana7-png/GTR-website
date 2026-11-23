@@ -1,0 +1,2 @@
+C:\Users\USER\Documents\Codex\2026-11-05\om\outputs\GTR-complete-frontend-backup.zip
+Includes .git, node_modules, untracked files and original working changes.

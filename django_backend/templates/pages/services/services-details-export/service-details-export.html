@@ -1,0 +1,249 @@
+{% extends "base.html" %}{% load static %}{% block document %}<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Mineral Trading - Grittech Resources</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+	<link
+		href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" href="{% static 'frontend/grittech.css' %}">
+	<link rel="stylesheet" href="{% static 'frontend/services/service.css' %}">
+	<link rel="stylesheet" href="{% static 'frontend/services/services-details-mineralTrading/serviceMineralTrading.css' %}">
+	<link rel="stylesheet" href="{% static 'frontend/dist/tailwind.css' %}">
+	<link rel="stylesheet" href="{% static 'frontend/services/service-intro.css' %}">
+	<link rel="stylesheet" href="{% static 'frontend/services/services-details-export/service-details-export.css' %}">
+</head>
+
+<body class="mineral-page trading-page">
+
+
+	{% include 'includes/nav_9805244aa0bd.html' %}
+
+	<main class="trading-detail">
+
+		<section class="about-service section-fade">
+			<div class="container">
+				<div class="row align-items-center g-4 g-lg-5">
+					<div class="col-lg-5">
+						<div class="about-image-wrap">
+							<a class="back-up-button" href="{% url 'website:services' %}" aria-label="Back to services">
+								<span aria-hidden="true">&#8592;</span>
+								<span>Go back</span>
+							</a>
+							<img src="https://images.pexels.com/photos/262353/pexels-photo-262353.jpeg"
+								alt="Shipping containers at a commercial port" class="img-fluid">
+						</div>
+					</div>
+					<div class="col-lg-7">
+						<span class="section-kicker">ABOUT OUR MINERAL TRADING SERVICE</span>
+						<div class="trading-line"></div>
+						<!--<h2>Reliable Supply.<br>Responsible Sourcing.<br>Global Impact.</h2>-->
+						<p>Grittech Resources Ltd facilitates mineral trading by connecting mineral suppliers with local
+							and international buyers. Our trading activities focus primarily on Gold and 3T
+							minerals&mdash;Tin, Tantalum, and Tungsten.</p>
+						<!--<p>We support commercial transactions through market-based pricing, clear trading agreements,
+							transparent communication, and responsible business practices, helping suppliers and buyers
+							establish reliable trading relationships.</p>-->
+						<div class="icon-grid">
+							<article class="icon-card"><i class="fa-solid fa-handshake" aria-hidden="true"></i>
+								<h3>Buyer &amp; Seller Connections</h3>
+								<p>Connecting mineral suppliers with potential buyers and trading opportunities.</p>
+							</article>
+							<article class="icon-card"><i class="fa-solid fa-chart-simple" aria-hidden="true"></i>
+								<h3>Market-Based Pricing</h3>
+								<p>Supporting competitive pricing discussions based on market conditions.</p>
+							</article>
+							<article class="icon-card"><i class="bi bi-file-text" aria-hidden="true"></i>
+								<h3>Trade Agreements</h3>
+								<p>Facilitating clear commercial terms covering price, quantity, quality, and payment.
+								</p>
+							</article>
+							<article class="icon-card"><i class="bi bi-arrow-left-right" aria-hidden="true"></i>
+								<h3>Transaction Coordination</h3>
+								<p>Supporting communication and coordination throughout mineral trading transactions.
+								</p>
+							</article>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="minerals-trade">
+			<div class="container">
+				<div class="section-heading text-center">
+					<h2>OUR MINERAL <span class="title-accent">TRADING ACTIVITIES</span></h2>
+					<div class="card-line"></div>
+				</div>
+				<div class="row g-4">
+					<div class="col-lg-3 col-md-6">
+						<article class="mineral-card"><img src="{% static 'frontend/images/Gold.avif' %}" alt="Gold mineral commodities"
+								loading="lazy">
+							<div class="mineral-overlay">
+								<h3>Mineral Buying &amp; Selling</h3>
+								<p>Facilitating commercial transactions between mineral suppliers and buyers.</p>
+							</div>
+						</article>
+					</div>
+					<div class="col-lg-3 col-md-6">
+						<article class="mineral-card"><img src="{% static 'frontend/images/pexels-alesiakozik-6770610.jpg' %}"
+								alt="Financial markets" loading="lazy">
+							<div class="mineral-overlay">
+								<h3>Price Negotiation</h3>
+								<p>Supporting discussions on pricing and commercial terms.</p>
+							</div>
+						</article>
+					</div>
+					<div class="col-lg-3 col-md-6">
+						<article class="mineral-card"><img src="{% static 'frontend/images/Warm Office Handshake.png' %}"
+								alt="Business partners shaking hands" loading="lazy">
+							<div class="mineral-overlay">
+								<h3>Buyer &amp; Seller Matching</h3>
+								<p>Connecting mineral sellers with suitable buyers based on trading requirements.</p>
+							</div>
+						</article>
+					</div>
+					<div class="col-lg-3 col-md-6">
+						<article class="mineral-card"><img
+								src="https://images.pexels.com/photos/730547/pexels-photo-730547.jpeg"
+								alt="Commercial documentation" loading="lazy">
+							<div class="mineral-overlay">
+								<h3>Trade Documentation</h3>
+								<p>Coordinating commercial documents needed for mineral transactions.</p>
+							</div>
+						</article>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="trading-process">
+			<div class="container">
+				<div class="section-head text-center"><span class="section-kicker">OUR TRADING PROCESS</span>
+					<h2 class="section-title">From Trade Inquiry to <span class="title-accent">Successful
+							Transaction</span></h2>
+				</div>
+				<div class="timeline-track">
+					<div class="timeline-progress" aria-hidden="true"></div>
+					<article class="timeline-step"><span class="step-dot">01</span><i class="bi bi-search"
+							aria-hidden="true"></i>
+						<h3>Trade Inquiry</h3>
+						<p>Receiving mineral buying or selling requests.</p>
+					</article>
+					<article class="timeline-step"><span class="step-dot">02</span><i class="bi bi-people"
+							aria-hidden="true"></i>
+						<h3>Buyer &amp; Seller Matching</h3>
+						<p>Identifying suitable trading counterparts.</p>
+					</article>
+					<article class="timeline-step"><span class="step-dot">03</span><i class="bi bi-coin"
+							aria-hidden="true"></i>
+						<h3>Price &amp; Terms Negotiation</h3>
+						<p>Agreeing on quantity, grade, price, payment, and delivery conditions.</p>
+					</article>
+					<article class="timeline-step"><span class="step-dot">04</span><i class="bi bi-file-earmark-check"
+							aria-hidden="true"></i>
+						<h3>Trade Agreement</h3>
+						<p>Confirming commercial terms and required documentation.</p>
+					</article>
+					<article class="timeline-step"><span class="step-dot">05</span><i class="bi bi-truck"
+							aria-hidden="true"></i>
+						<h3>Transaction Coordination</h3>
+						<p>Supporting communication and transaction completion.</p>
+					</article>
+				</div>
+			</div>
+		</section>
+
+		<section class="why-grittech">
+			<div class="container">
+				<div class="section-heading text-center">
+					<h2>Why Choose GRITTECH for <span class="title-accent">Mineral Trading</span></h2>
+				</div>
+				<div class="row g-4">
+					<div class="col-lg-4 col-md-6">
+						<article class="feature-card"><i class="bi bi-shield-check" aria-hidden="true"></i>
+							<h3>Transparent Transactions</h3>
+							<p>Promoting clear communication and accountable commercial dealings.</p>
+						</article>
+					</div>
+					<div class="col-lg-4 col-md-6">
+						<article class="feature-card"><i class="bi bi-coin" aria-hidden="true"></i>
+							<h3>Competitive Market Pricing</h3>
+							<p>Supporting pricing discussions aligned with market conditions.</p>
+						</article>
+					</div>
+					<div class="col-lg-4 col-md-6">
+						<article class="feature-card"><i class="bi bi-people-fill" aria-hidden="true"></i>
+							<h3>Strong Trading Relationships</h3>
+							<p>Building long-term commercial relationships with mineral buyers and sellers.</p>
+						</article>
+					</div>
+					<div class="col-lg-4 col-md-6">
+						<article class="feature-card"><i class="bi bi-arrow-left-right" aria-hidden="true"></i>
+							<h3>Flexible Trading Arrangements</h3>
+							<p>Responding to different customer requirements and commercial needs.</p>
+						</article>
+					</div>
+					<div class="col-lg-4 col-md-6">
+						<article class="feature-card"><i class="fa-solid fa-leaf" aria-hidden="true"></i>
+							<h3>Responsible Business Practices</h3>
+							<p>Promoting due diligence and compliance in mineral transactions.</p>
+						</article>
+					</div>
+					<div class="col-lg-4 col-md-6">
+						<article class="feature-card"><i class="bi bi-globe2" aria-hidden="true"></i>
+							<h3>International Buyer Connections</h3>
+							<p>Facilitating mineral trading opportunities in regional and international markets.</p>
+						</article>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="stats-section" aria-label="Trading highlights">
+			<div class="container">
+				<div class="row g-4">
+					<div class="col-lg-3 col-md-6">
+						<article class="stat-card"><i class="stat-icon fa-solid fa-handshake" aria-hidden="true"></i>
+							<h3>Transparent Trade</h3>
+							<p>Clear &amp; Accountable</p>
+						</article>
+					</div>
+					<div class="col-lg-3 col-md-6">
+						<article class="stat-card"><i class="stat-icon fa-solid fa-chart-simple" aria-hidden="true"></i>
+							<h3>Market-Based Pricing</h3>
+							<p>Competitive &amp; Fair</p>
+						</article>
+					</div>
+					<div class="col-lg-3 col-md-6">
+						<article class="stat-card"><i class="stat-icon bi bi-people-fill" aria-hidden="true"></i>
+							<h3>Commercial Partnerships</h3>
+							<p>Reliable &amp; Long-Term</p>
+						</article>
+					</div>
+					<div class="col-lg-3 col-md-6">
+						<article class="stat-card"><i class="stat-icon bi bi-globe2" aria-hidden="true"></i>
+							<h3>International Markets</h3>
+							<p>Regional &amp; Global Access</p>
+						</article>
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+
+
+	</main>
+	{% include 'includes/footer_7bcf35135222.html' %}
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>{% endblock %}

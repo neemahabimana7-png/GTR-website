@@ -1,0 +1,239 @@
+{% extends "base.html" %}{% load static %}{% block document %}<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - Grittech Resources</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Open+Sans:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'frontend/grittech.css' %}">
+    <link rel="stylesheet" href="{% static 'frontend/services/service.css' %}">
+    <link rel="stylesheet" href="{% static 'frontend/services/service-intro.css' %}">
+    <link rel="stylesheet" href="{% static 'frontend/dist/tailwind.css' %}">
+</head>
+
+<body>
+
+
+    {% include 'includes/nav_2ab696685d73.html' %}
+
+    <main class="services-page">
+        <section class="services-hero animate-section">
+            <div class="hero-overlay"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <h1>End-to-End Mineral Trading &amp; Supply Chain Solutions</h1>
+                        <p>
+                            Grittech Resources Ltd provides trusted mineral sourcing, responsible trading,
+                            export logistics, compliance services, and strategic partnerships connecting
+                            African mineral resources with international markets.
+                        </p>
+                        <div class="hero-actions">
+                            <a href="{% url 'website:services' %}" class="btn btn-gold">Explore Services</a>
+                            <a href="{% url 'inquiries:contact' %}" class="btn btn-outline-premium">Contact Us</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="core-services" class="section-space section-muted animate-section">
+            <div class="container">
+                <div class="section-head text-center">
+                    <span class="section-kicker">OUR SERVICES</span>
+                    <div class="card-line"></div>
+                    <h2 class="section-title">Our Mineral <span class="title-accent">Solutions</span></h2>
+                    <p class="section-text">A comprehensive range of mineral services focused on Gold and 3T minerals, from sourcing and trading to quality, compliance, and international market access.</p>
+                </div>
+                <div class="row g-4">
+                    <div class="col-lg-4 col-md-6">
+                        <article class="service-card">
+                            <div class="service-image-wrap">
+                                <img src="{% static 'frontend/images/Gold.avif' %}" alt="Gold mineral nuggets" loading="lazy">
+                            </div>
+                            <div class="service-body">
+                                <span class="service-icon"><i class="fa-solid fa-cubes-stacked" aria-hidden="true"></i></span>
+                                <h3>Gold &amp; 3T Mineral Sourcing</h3>
+                                <p>Sourcing gold, tin, tantalum, and tungsten through reliable supplier relationships to meet customer requirements.</p>
+                                <a href="{% url 'website:sourcing' %}" class="service-link">Learn More <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <article class="service-card">
+                            <div class="service-image-wrap">
+                                <img src="{% static 'frontend/images/coltan.jpeg' %}" alt="Mineral commodity ore" loading="lazy">
+                            </div>
+                            <div class="service-body">
+                                <span class="service-icon"><i class="fa-solid fa-handshake" aria-hidden="true"></i></span>
+                                <h3>Mineral Trading</h3>
+                                <p>Trading of gold and 3T minerals through transparent transactions, competitive market-based pricing, and trusted partnerships.</p>
+                                <a href="{% url 'website:trading' %}" class="service-link">Learn More <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <article class="service-card">
+                            <div class="service-image-wrap">
+                                <img src="https://images.pexels.com/photos/4481325/pexels-photo-4481325.jpeg" alt="Mineral warehousing and logistics" loading="lazy">
+                            </div>
+                            <div class="service-body">
+                                <span class="service-icon"><i class="bi bi-truck" aria-hidden="true"></i></span>
+                                <h3>Mineral Supply Chain Solutions</h3>
+                                <p>Coordinating mineral supply activities, supplier management, documentation, and logistics arrangements for reliable delivery.</p>
+                                <a href="{% url 'website:supply' %}" class="service-link">Learn More <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <article class="service-card">
+                            <div class="service-image-wrap">
+                                <img src="https://images.pexels.com/photos/3861438/pexels-photo-3861438.jpeg" alt="Laboratory inspection" loading="lazy">
+                            </div>
+                            <div class="service-body">
+                                <span class="service-icon"><i class="fa-solid fa-flask" aria-hidden="true"></i></span>
+                                <h3>Mineral Quality &amp; Grade Management</h3>
+                                <p>Supporting mineral quality assessment, grade verification, and compliance with customer specifications.</p>
+                                <a href="{% url 'website:quality' %}" class="service-link">Learn More <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <article class="service-card">
+                            <div class="service-image-wrap">
+                                <img src="https://images.pexels.com/photos/730547/pexels-photo-730547.jpeg" alt="Compliance documentation" loading="lazy">
+                            </div>
+                            <div class="service-body">
+                                <span class="service-icon"><i class="bi bi-shield-check" aria-hidden="true"></i></span>
+                                <h3>Mineral Traceability &amp; Compliance</h3>
+                                <p>Supporting responsible sourcing through KYC verification, supplier due diligence, traceability, and regulatory compliance.</p>
+                                <a href="{% url 'website:traceability' %}" class="service-link">Learn More <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+                            </div>
+                        </article>
+                    </div>
+              <!---    <div class="col-lg-4 col-md-6">
+                        <article class="service-card">
+                            <div class="service-image-wrap">
+                                <img src="https://images.pexels.com/photos/256219/pexels-photo-256219.jpeg" alt="International shipping port" loading="lazy">
+                            </div>
+                            <div class="service-body">
+                                <span class="service-icon"><i class="bi bi-globe2" aria-hidden="true"></i></span>
+                                <h3>International Mineral Market Access</h3>
+                                <p>Connecting mineral suppliers with international buyers and supporting responsible trade across regional and global markets.</p>
+                                <a href="{% url 'website:markets' %}" class="service-link">Learn More <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+                            </div>
+                        </article>
+                    </div>-->
+                </div>
+            </div>
+        </section>
+
+        <!--- <section id="trading-process" class="section-space section-muted animate-section">
+            <div class="container">
+                <div class="section-head text-center">
+                    <span class="section-kicker">OUR PROCESS</span>
+                    <div class="card-line"></div>
+                    <h2 class="section-title">From Supplier to <span class="title-accent">International Buyer</span></h2>
+                </div>
+                <div class="process-track">
+                    <div class="process-step">
+                        <span class="process-icon"><i class="bi bi-person-badge"></i></span>
+                        <h3>Supplier</h3>
+                    </div>
+                    <div class="process-step">
+                        <span class="process-icon"><i class="bi bi-search"></i></span>
+                        <h3>Inspection</h3>
+                    </div>
+                    <div class="process-step">
+                        <span class="process-icon"><i class="bi bi-file-earmark-text"></i></span>
+                        <h3>Documentation</h3>
+                    </div>
+                    <div class="process-step">
+                        <span class="process-icon"><i class="bi bi-truck"></i></span>
+                        <h3>Export Logistics</h3>
+                    </div>
+                    <div class="process-step">
+                        <span class="process-icon"><i class="bi bi-globe-americas"></i></span>
+                        <h3>International Buyer</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="minerals" class="section-space animate-section">
+            <div class="container">
+                <div class="section-head text-center">
+                    <span class="section-kicker">MINERALS WE TRADE</span>
+                    <div class="card-line"></div>
+                    <h2 class="section-title">Essential Commodities for <span class="title-accent">Global Industry</span></h2>
+                </div>
+                <div class="row g-4">
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <article class="mineral-card">
+                            <img src="https://images.unsplash.com/photo-1737815914093-becb6c9ac064?q=80&w=1315&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Gold mineral">
+                            <h3>Gold</h3>
+                            <p>High-value commodity for investment and technology markets.</p>
+                        </article>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <article class="mineral-card">
+                            <img src="images/copper.png" alt="Copper metal">
+                            <h3>Copper</h3>
+                            <p>Critical conductive metal used in power and infrastructure.</p>
+                        </article>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <article class="mineral-card">
+                            <img src="https://media.istockphoto.com/id/1625473038/photo/coltan-from-analalava-district-madagascar.jpg?s=2048x2048&w=is&k=20&c=4pA1XHtD01p2xCD9s59Hei3616Mh8rqLzAHfN4qInv8=" alt="Coltan ore">
+                            <h3>Coltan</h3>
+                            <p>Essential input for electronics and advanced components.</p>
+                        </article>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <article class="mineral-card">
+                            <img src="https://media.istockphoto.com/id/2159326436/photo/the-mineral-ilmenite-is-black-in-color-with-a-metallic-tint-and-with-an-uneven-surface.jpg?s=2048x2048&w=is&k=20&c=kRs17oAUh4PBHJdHNr4hBWwwbHq_0DESFDQWkq3FCz0=" alt="Tantalum raw material">
+                            <h3>Tantalum</h3>
+                            <p>Key mineral for capacitors and high-performance industries.</p>
+                        </article>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <article class="mineral-card">
+                            <img src="images/Tin.PNG" alt="Tin mineral">
+                            <h3>Tin</h3>
+                            <p>Widely used in solders, plating, and manufacturing processes.</p>
+                        </article>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <article class="mineral-card">
+                            <img src="https://media.istockphoto.com/id/1638264348/photo/99-95-fine-tungsten.jpg?s=2048x2048&w=is&k=20&c=6LYxdIXLo2-YJf9923nITnth0lXoLNjpn8eiiZHVH7g=" alt="Tungsten ore">
+                            <h3>Tungsten</h3>
+                            <p>Dense industrial metal known for durability and heat resistance.</p>
+                        </article>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <article class="mineral-card">
+                            <img src="https://media.istockphoto.com/id/173234109/photo/really-and-pure-chemical-elements-here-shown-manganese-mn.jpg?s=2048x2048&w=is&k=20&c=sQd8KNV-tNXVqvCWUQgc1Gph9_XyFblvHzpeVK54jVA=" alt="Manganese mineral">
+                            <h3>Manganese</h3>
+                            <p>Foundational mineral for steel production and alloys.</p>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>-->
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+
+    {% include 'includes/footer_a781d6980e13.html' %}
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>{% endblock %}

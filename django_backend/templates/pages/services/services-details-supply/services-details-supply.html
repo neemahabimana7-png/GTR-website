@@ -1,0 +1,71 @@
+{% extends "base.html" %}{% load static %}{% block document %}<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Mineral Supply Chain Solutions - Grittech Resources</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+	<link
+		href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" href="{% static 'frontend/grittech.css' %}">
+	<link rel="stylesheet" href="{% static 'frontend/services/service.css' %}">
+	
+  <link rel="stylesheet" href="{% static 'frontend/dist/tailwind.css' %}">
+	<link rel="stylesheet" href="{% static 'frontend/services/service-intro.css' %}">
+  <link rel="stylesheet" href="{% static 'frontend/services/services-details-supply/services-details-supply.css' %}"></head>
+
+<body class="services-page export-page supply-page">
+	
+  
+  {% include 'includes/nav_ab65faac36c5.html' %}
+
+	<main class="supply-detail"><section id="about-service" class="section-space export-about animate-section">
+			<div class="container">
+				<div class="row align-items-center g-4 g-lg-5">
+					<div class="col-lg-5">
+						<div class="export-image-card">
+							<a class="back-up-button" href="{% url 'website:services' %}" aria-label="Back to services">
+								<span aria-hidden="true">&#8592;</span>
+								<span>Go back</span>
+							</a>
+							<img src="https://www.atsinc.com/hs-fs/hubfs/4-May-22-2024-05-10-34-4079-PM.png?height=560&amp;name=4-May-22-2024-05-10-34-4079-PM.png&amp;width=940" alt="Air cargo loading and freight handling at an airport" class="img-fluid">
+						</div>
+					</div>
+					<div class="col-lg-7">
+						<span class="section-kicker">ABOUT OUR MINERAL SUPPLY CHAIN SOLUTIONS</span>
+						<div class="card-line"></div>
+						<p class="section-text export-intro">Grittech Resources Ltd supports efficient mineral supply through supplier coordination, export documentation, international air freight arrangements, and delivery follow-up.</p><p class="section-text export-intro">Working with international clients, we coordinate the movement of Gold and 3T minerals&mdash;Tin, Tantalum, and Tungsten&mdash;from suppliers to buyers through reliable logistics partnerships, responsible practices, and applicable export procedures.</p>
+						<div class="feature-grid export-feature-grid"><article class="feature-item-card"><div class="feature-item-icon"><i class="fa-solid fa-layer-group" aria-hidden="true"></i></div><h3>Supply Chain Coordination</h3><p>Coordinating mineral supply activities from supplier to buyer.</p></article>
+<article class="feature-item-card"><div class="feature-item-icon"><i class="fa-solid fa-plane" aria-hidden="true"></i></div><h3>International Air Freight</h3><p>Arranging mineral shipments by air for international customers.</p></article>
+<article class="feature-item-card"><div class="feature-item-icon"><i class="fa-solid fa-clipboard-list" aria-hidden="true"></i></div><h3>Export Documentation &amp; Compliance</h3><p>Supporting export permits, customs documentation, and applicable regulatory requirements.</p></article>
+<article class="feature-item-card"><div class="feature-item-icon"><i class="fa-solid fa-users" aria-hidden="true"></i></div><h3>Supplier Coordination</h3><p>Working with mineral suppliers to meet customer and shipment requirements.</p></article></div>
+					</div>
+				</div>
+			</div>
+		</section><section id="export-services" class="section-space"><div class="container"><div class="section-head text-center"><h2 class="section-title">OUR SUPPLY CHAIN <span class="title-accent">SOLUTIONS</span></h2><div class="card-line mx-auto"></div></div><div class="row g-4"><div class="col-lg-3 col-md-6"><article class="supply-image-card"><img src="{% static 'frontend/images/Gold.avif' %}" alt="Gold mineral supply" loading="lazy"><div class="supply-image-overlay"><h3>Mineral Supply Planning</h3><p>Coordinating mineral quantities, specifications, and shipment schedules according to customer requirements.</p></div></article></div>
+<div class="col-lg-3 col-md-6"><article class="supply-image-card"><img src="https://images.pexels.com/photos/4481325/pexels-photo-4481325.jpeg" alt="Shipment preparation and warehouse coordination" loading="lazy"><div class="supply-image-overlay"><h3>Supplier &amp; Shipment Coordination</h3><p>Working with suppliers and logistics partners to prepare minerals for international shipment.</p></div></article></div>
+<div class="col-lg-3 col-md-6"><article class="supply-image-card"><img src="https://www.atsinc.com/hs-fs/hubfs/4-May-22-2024-05-10-34-4079-PM.png?height=560&amp;name=4-May-22-2024-05-10-34-4079-PM.png&amp;width=940" alt="Cargo aircraft loading at an airport" loading="lazy"><div class="supply-image-overlay"><h3>International Air Freight</h3><p>Coordinating mineral shipments by air to international destinations through cargo and logistics partners.</p></div></article></div>
+<div class="col-lg-3 col-md-6"><article class="supply-image-card"><img src="https://images.pexels.com/photos/730547/pexels-photo-730547.jpeg" alt="Export paperwork and documentation" loading="lazy"><div class="supply-image-overlay"><h3>Export Documentation &amp; Clearance</h3><p>Supporting the preparation and coordination of required export, customs, and shipment documents.</p></div></article></div></div></div></section><section id="export-journey" class="section-space export-journey"><div class="container"><div class="section-head text-center"><span class="section-kicker">OUR SUPPLY CHAIN PROCESS</span><h2 class="section-title">From Mineral Supply Planning to <span class="title-accent">International Delivery</span></h2></div><div class="journey-track"><article class="journey-step"><span class="journey-number">01</span><div class="journey-icon"><i class="fa-solid fa-clipboard-list" aria-hidden="true"></i></div><h3>Supply Planning</h3><p>Confirming mineral quantities, specifications, and delivery requirements.</p></article>
+<article class="journey-step"><span class="journey-number">02</span><div class="journey-icon"><i class="fa-solid fa-users" aria-hidden="true"></i></div><h3>Supplier Coordination</h3><p>Coordinating mineral availability and shipment preparation.</p></article>
+<article class="journey-step"><span class="journey-number">03</span><div class="journey-icon"><i class="fa-solid fa-file-lines" aria-hidden="true"></i></div><h3>Export Documentation</h3><p>Supporting the required export, customs, and regulatory documentation.</p></article>
+<article class="journey-step"><span class="journey-number">04</span><div class="journey-icon"><i class="fa-solid fa-plane" aria-hidden="true"></i></div><h3>Air Freight Coordination</h3><p>Arranging international cargo shipments through logistics partners.</p></article>
+<article class="journey-step"><span class="journey-number">05</span><div class="journey-icon"><i class="fa-solid fa-circle-check" aria-hidden="true"></i></div><h3>Delivery &amp; Follow-Up</h3><p>Monitoring shipment progress and coordinating delivery confirmation.</p></article></div></div></section><section id="why-grittech" class="section-space"><div class="container"><div class="section-head text-center"><h2 class="section-title">Why Choose GRITTECH for <span class="title-accent">Mineral Supply Chain Solutions</span></h2></div><div class="row g-4"><div class="col-lg-4 col-md-6"><article class="buyer-feature-card"><i class="fa-solid fa-route" aria-hidden="true"></i><h3>End-to-End Coordination</h3><p>Supporting mineral supply activities from supplier to international buyer.</p></article></div>
+<div class="col-lg-4 col-md-6"><article class="buyer-feature-card"><i class="fa-solid fa-plane" aria-hidden="true"></i><h3>International Air Freight</h3><p>Coordinating air cargo arrangements for overseas mineral shipments.</p></article></div>
+<div class="col-lg-4 col-md-6"><article class="buyer-feature-card"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i><h3>Export Compliance Support</h3><p>Supporting the required export and customs documentation.</p></article></div>
+<div class="col-lg-4 col-md-6"><article class="buyer-feature-card"><i class="fa-solid fa-users" aria-hidden="true"></i><h3>Reliable Supplier Relationships</h3><p>Maintaining effective coordination with mineral suppliers.</p></article></div>
+<div class="col-lg-4 col-md-6"><article class="buyer-feature-card"><i class="fa-solid fa-chart-line" aria-hidden="true"></i><h3>Efficient Shipment Coordination</h3><p>Supporting organized and timely international shipment arrangements.</p></article></div>
+<div class="col-lg-4 col-md-6"><article class="buyer-feature-card"><i class="fa-solid fa-globe" aria-hidden="true"></i><h3>Customer-Focused Solutions</h3><p>Adapting supply arrangements to international customer requirements.</p></article></div></div></div></section><section id="supply-highlights" class="section-space" aria-label="Supply chain highlights"><div class="container"><div class="row g-4"><div class="col-lg-3 col-md-6"><article class="supply-highlight-card"><i class="fa-solid fa-plane" aria-hidden="true"></i><h3>International Air Freight</h3><p>Global Mineral Shipments</p></article></div>
+<div class="col-lg-3 col-md-6"><article class="supply-highlight-card"><i class="fa-solid fa-layer-group" aria-hidden="true"></i><h3>Supply Coordination</h3><p>Organized &amp; Reliable</p></article></div>
+<div class="col-lg-3 col-md-6"><article class="supply-highlight-card"><i class="fa-solid fa-file-lines" aria-hidden="true"></i><h3>Export Documentation</h3><p>Compliant &amp; Accurate</p></article></div>
+<div class="col-lg-3 col-md-6"><article class="supply-highlight-card"><i class="fa-solid fa-globe" aria-hidden="true"></i><h3>International Delivery</h3><p>Reliable Delivery Support</p></article></div></div></div></section></main>
+	{% include 'includes/footer_f69b82a3ee61.html' %}
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>{% endblock %}

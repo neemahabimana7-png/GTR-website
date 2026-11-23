@@ -1,0 +1,125 @@
+{% load static %}<footer class="footer">
+
+    <div class="container">
+
+      <div class="row gy-5">
+
+        <!-- Company Info -->
+
+        <div class="col-lg-4">
+
+          <img src="{% static 'frontend/images/Grittech Logo.png' %}" class="footer-logo" alt="Grittech Logo">
+
+          <p class="footer-text">
+
+            Empowering trusted mineral trading across Africa through
+            responsible sourcing, transparency and strategic partnerships.
+
+          </p>
+
+          <div class="social-links">
+
+            <a href="https://www.facebook.com/EpcaGroup"><i class="fab fa-facebook-f"></i></a>
+
+            <a href="https://www.linkedin.com/company/epc-africa-group/"><i class="fab fa-linkedin-in"></i></a>
+
+            <a href="https://www.instagram.com/epc_africa_group?igsi=NjhmYXlqdnU0Z3Z4"><i
+                class="fab fa-instagram"></i></a>
+
+            <a href="https://x.com/epcafrica"><i class="fab fa-x-twitter"></i></a>
+
+          </div>
+
+        </div>
+
+        <!-- Quick Links -->
+
+        <div class="col-lg-2 col-md-6">
+
+          <h4>Quick Links</h4>
+
+          <ul>
+
+            <li><a href="{% url 'website:home' %}">Home</a></li>
+
+            <li><a href="{% url 'website:about' %}">About</a></li>
+
+            <li><a href="{% url 'website:services' %}">Services</a></li>
+
+            <li><a href="{% url 'inquiries:contact' %}">Contact</a></li>
+
+          </ul>
+
+        </div>
+
+        <!-- Services -->
+
+        <div class="col-lg-3 col-md-6">
+
+          <h4>Our Services</h4>
+
+          <ul>
+            <li><a href="{% url 'website:partnerships' %}">Strategic
+                Partnerships</a></li>
+            <li><a href="{% url 'website:sourcing' %}">Mineral Trading</a></li>
+            <li><a href="{% url 'website:trading' %}">Gold Export</a></li>
+            <li><a href="{% url 'website:supply' %}">Supply Chain Solutions</a>
+            </li>
+            <li><a href="{% url 'website:traceability' %}">Traceability &amp;
+                Compliance</a></li>
+            <li><a href="{% url 'website:markets' %}">Global Market
+                Access</a></li>
+          </ul>
+
+        </div>
+
+        <!-- Contact -->
+
+        <div class="col-lg-3">
+
+          <h4>Contact Us</h4>
+
+          <ul class="contact-info">
+
+            <li>
+              <i class="fas fa-location-dot"></i>
+              Gacuriro KG 436 Street #6B,<br>
+              Kigali, Rwanda
+            </li>
+
+            <li>
+              <i class="fas fa-phone"></i>
+              +250 788 358 601
+            </li>
+
+            <li>
+              <i class="fas fa-phone"></i>
+              +250 788 433 042
+            </li>
+
+            <li>
+              <i class="fas fa-envelope"></i>
+              grittech@epcafrica.com
+            </li>
+
+          </ul>
+
+        </div>
+
+      </div>
+
+      <hr>
+
+      <div class="footer-bottom">
+
+        <p>
+
+          © 2026 Grittech Resources Ltd. All Rights Reserved.
+
+        </p>
+
+      </div>
+
+    </div>
+
+  </footer>

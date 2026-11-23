@@ -1,0 +1,97 @@
+{
+  "checks": [
+    {
+      "check": "HTTP page home",
+      "status": 200,
+      "bytes": 19019
+    },
+    {
+      "check": "HTTP page about",
+      "status": 200,
+      "bytes": 15694
+    },
+    {
+      "check": "HTTP page services",
+      "status": 200,
+      "bytes": 19587
+    },
+    {
+      "check": "HTTP page sourcing",
+      "status": 200,
+      "bytes": 15550
+    },
+    {
+      "check": "HTTP page trading",
+      "status": 200,
+      "bytes": 13502
+    },
+    {
+      "check": "HTTP page supply",
+      "status": 200,
+      "bytes": 13509
+    },
+    {
+      "check": "HTTP page quality",
+      "status": 200,
+      "bytes": 13127
+    },
+    {
+      "check": "HTTP page traceability",
+      "status": 200,
+      "bytes": 13037
+    },
+    {
+      "check": "HTTP page markets",
+      "status": 200,
+      "bytes": 15692
+    },
+    {
+      "check": "HTTP page partnerships",
+      "status": 200,
+      "bytes": 18623
+    },
+    {
+      "check": "HTTP page partnerships-alternative",
+      "status": 200,
+      "bytes": 17575
+    },
+    {
+      "check": "/admin/login/",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "bytes": 4163
+    },
+    {
+      "check": "/static/frontend/grittech.css",
+      "status": 200,
+      "content_type": "text/css",
+      "bytes": 35054
+    },
+    {
+      "check": "/static/frontend/images/Gold.avif",
+      "status": 200,
+      "content_type": "image/avif",
+      "bytes": 131719
+    },
+    {
+      "check": "/static/frontend/services/service.css",
+      "status": 200,
+      "content_type": "text/css",
+      "bytes": 10074
+    },
+    {
+      "check": "real HTTP CSRF-protected submission",
+      "success_feedback": true,
+      "persisted": true,
+      "notification_status": "sent"
+    },
+    {
+      "check": "production configuration with synthetic environment only",
+      "returncode": 0,
+      "output": "System check identified some issues:\n\nWARNINGS:\n?: (security.W005) You have not set the SECURE_HSTS_INCLUDE_SUBDOMAINS setting to True. Without this, your site is potentially vulnerable to attack via an insecure connection to a subdomain. Only set this to True if you are certain that all subdomains of your domain should be served exclusively via SSL.\n?: (security.W021) You have not set the SECURE_HSTS_PRELOAD setting to True. Without this, your site cannot be submitted to the browser preload list.\n\nSystem check identified 2 issues (0 silenced).\n",
+      "live_postgres_or_smtp_tested": false
+    }
+  ],
+  "synthetic_inquiry_deleted": true,
+  "browser_visual_check": "unavailable: CUA kernel assets path could not be initialized"
+}

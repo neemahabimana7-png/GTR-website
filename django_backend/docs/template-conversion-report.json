@@ -1,0 +1,15 @@
+[
+  {
+    "page": "services/service.html",
+    "unresolved_original_reference": "images/copper.png"
+  },
+  {
+    "page": "services/service.html",
+    "unresolved_original_reference": "images/Tin.PNG"
+  },
+  {
+    "page": "services/services-details-quality/services-details-quality.html",
+    "technical_link_repair": "./services-details-supply.html",
+    "route": "website:supply"
+  }
+]

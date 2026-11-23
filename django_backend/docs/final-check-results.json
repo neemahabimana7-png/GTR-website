@@ -1,0 +1,37 @@
+[
+  {
+    "command": "python manage.py check",
+    "returncode": 0,
+    "output": "System check identified no issues (0 silenced).\n"
+  },
+  {
+    "command": "python manage.py makemigrations --check --dry-run",
+    "returncode": 0,
+    "output": "No changes detected\n"
+  },
+  {
+    "command": "python manage.py migrate --check",
+    "returncode": 0,
+    "output": ""
+  },
+  {
+    "command": "python manage.py collectstatic --noinput",
+    "returncode": 0,
+    "output": "\n163 static files copied to 'C:\\Users\\USER\\Desktop\\EPCA websites\\GTR-website\\django_backend\\static_collected'.\n"
+  },
+  {
+    "command": "python -m pip check",
+    "returncode": 0,
+    "output": "No broken requirements found.\n"
+  },
+  {
+    "command": "python manage.py test --verbosity 1",
+    "returncode": 0,
+    "output": "Found 33 test(s).\nSystem check identified no issues (0 silenced).\nDeleted 1 expired rate-limit buckets.\nCreating test database for alias 'default'...\n\n.......Notification failed for inquiry 1; retained for staff retry.\n...............Notification failed for inquiry 1; retained for staff retry.\n...........\n----------------------------------------------------------------------\nRan 33 tests in 33.190s\n\nOK\nDestroying test database for alias 'default'...\n\n"
+  },
+  {
+    "command": "python scripts/verify_frontend.py",
+    "returncode": 0,
+    "output": "{\n  \"original_files_checked\": 2675,\n  \"original_changes\": [],\n  \"static_copies_checked\": 36,\n  \"static_changes\": [],\n  \"pages\": [\n    {\n      \"page\": \"home\",\n      \"status\": 200,\n      \"dom_equal\": true,\n      \"inline_js_equal\": true\n    },\n    {\n      \"page\": \"about\",\n      \"status\": 200,\n      \"dom_equal\": true,\n      \"inline_js_equal\": true\n    },\n    {\n      \"page\": \"services\",\n      \"status\": 200,\n      \"dom_equal\": true,\n      \"inline_js_equal\": true\n    },\n    {\n      \"page\": \"sourcing\",\n      \"status\": 200,\n      \"dom_equal\": true,\n      \"inline_js_equal\": true\n    },\n    {\n      \"page\": \"trading\",\n      \"status\": 200,\n      \"dom_equal\": true,\n      \"inline_js_equal\": true\n    },\n    {\n      \"page\": \"supply\",\n      \"status\": 200,\n      \"dom_equal\": true,\n      \"inline_js_equal\": true\n    },\n    {\n      \"page\": \"quality\",\n      \"status\": 200,\n      \"dom_equal\": true,\n      \"inline_js_equal\": true\n    },\n    {\n      \"page\": \"traceability\",\n      \"status\": 200,\n      \"dom_equal\": true,\n      \"inline_js_equal\": true\n    },\n    {\n      \"page\": \"markets\",\n      \"status\": 200,\n      \"dom_equal\": true,\n      \"inline_js_equal\": true\n    },\n    {\n      \"page\": \"partnerships\",\n      \"status\": 200,\n      \"dom_equal\": true,\n      \"inline_js_equal\": true\n    },\n    {\n      \"page\": \"partnerships-alternative\",\n      \"status\": 200,\n      \"dom_equal\": true,\n      \"inline_js_equal\": true\n    },\n    {\n      \"page\": \"contact\",\n      \"status\": 200,\n      \"dom_equal\": true,\n      \"inline_js_equal\": true\n    }\n  ],\n  \"browser_pixel_comparison\": \"not performed by this script\"\n}\n"
+  }
+]

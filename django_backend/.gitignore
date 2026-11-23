@@ -1,0 +1,7 @@
+.venv/
+.env
+.local/
+__pycache__/
+*.py[cod]
+static_collected/
+test-results/
