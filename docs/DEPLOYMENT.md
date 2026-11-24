@@ -10,7 +10,7 @@ The repository is ready to deploy as a Dockerfile-based Coolify application. No 
 4. For SQLite, add a Coolify persistent storage volume mounted at `/data` in the container. For PostgreSQL instead, attach or create a service on the private Coolify network and use its internal hostname—not `localhost`.
 5. Add your domain in Coolify and enable its HTTPS certificate/proxy.
 
-At startup the container applies migrations, collects static assets, then starts Waitress. WhiteNoise serves `/static/` from the collected directory. For SQLite, the `/data` volume must be persistent and writable by the container's `django` user or inquiry data will be lost on redeploy.
+At startup the container applies migrations, collects static assets, then starts Waitress. WhiteNoise serves `/static/` from the collected directory. Waitress trusts only `X-Forwarded-Proto` from its configured proxy; by default the proxy address is `*` because Coolify's internal proxy address can vary. The app port must only be reachable through Coolify's proxy. If you know the proxy's stable internal IP, set `WAITRESS_TRUSTED_PROXY` to that IP instead. For SQLite, the `/data` volume must be persistent and writable by the container's `django` user or inquiry data will be lost on redeploy.
 
 ## 2. Add environment variables
 
@@ -39,10 +39,11 @@ Add these as Coolify runtime environment variables/secrets. Do not commit them o
 | `DEFAULT_FROM_EMAIL` | Verified sender address for your domain |
 | `CONTACT_RECIPIENTS` | Approved inquiry recipient address(es), comma-separated |
 | `TRUST_HTTPS_PROXY` | Set to `true` for the HTTPS domain routed through Coolify's proxy; leave `false` if the app is not behind a trusted HTTPS-terminating proxy |
+| `WAITRESS_TRUSTED_PROXY` | Optional stable internal IP of the Coolify proxy; defaults to `*` when the app is reachable only through Coolify |
 
 Generate `SECRET_KEY` locally, for example with `python -c "import secrets; print(secrets.token_urlsafe(48))"`. Keep it private. Do not use `*` for `ALLOWED_HOSTS`. Set exact hostnames and HTTPS origins, with no trailing slash on the origin.
 
-Do not override `DJANGO_SETTINGS_MODULE` to development settings. Do not expose the container directly to the public internet outside Coolify's proxy.
+Do not override `DJANGO_SETTINGS_MODULE` to development settings. Do not expose the container directly to the public internet outside Coolify's proxy: Waitress trusts the HTTPS protocol header from its configured proxy.
 
 ### SQLite notes
 
