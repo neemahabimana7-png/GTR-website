@@ -17,12 +17,22 @@ ALLOWED_HOSTS = csv('ALLOWED_HOSTS')
 CSRF_TRUSTED_ORIGINS = csv('CSRF_TRUSTED_ORIGINS')
 if not ALLOWED_HOSTS or '*' in ALLOWED_HOSTS:
     raise ImproperlyConfigured('Explicit production ALLOWED_HOSTS are required.')
-DATABASES = {'default': {
-    'ENGINE': 'django.db.backends.postgresql', 'NAME': required('DB_NAME'),
-    'USER': required('DB_USER'), 'PASSWORD': required('DB_PASSWORD'),
-    'HOST': required('DB_HOST'), 'PORT': os.environ.get('DB_PORT', '5432'),
-    'CONN_MAX_AGE': 60, 'OPTIONS': {'sslmode': os.environ.get('DB_SSLMODE', 'verify-full')},
-}}
+DB_ENGINE = os.environ.get('DB_ENGINE', 'postgresql').strip().lower()
+if DB_ENGINE == 'sqlite':
+    DATABASES = {'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.environ.get('SQLITE_PATH', '/data/db.sqlite3'),
+        'OPTIONS': {'timeout': 20},
+    }}
+elif DB_ENGINE == 'postgresql':
+    DATABASES = {'default': {
+        'ENGINE': 'django.db.backends.postgresql', 'NAME': required('DB_NAME'),
+        'USER': required('DB_USER'), 'PASSWORD': required('DB_PASSWORD'),
+        'HOST': required('DB_HOST'), 'PORT': os.environ.get('DB_PORT', '5432'),
+        'CONN_MAX_AGE': 60, 'OPTIONS': {'sslmode': os.environ.get('DB_SSLMODE', 'verify-full')},
+    }}
+else:
+    raise ImproperlyConfigured('DB_ENGINE must be sqlite or postgresql.')
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = required('EMAIL_HOST')
 DEFAULT_FROM_EMAIL = required('DEFAULT_FROM_EMAIL')

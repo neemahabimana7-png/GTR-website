@@ -1,6 +1,6 @@
 # Grittech Resources website
 
-Django website with a PostgreSQL-backed contact form and Django Admin.
+Django website with a database-backed contact form and Django Admin. Production supports PostgreSQL or SQLite.
 
 ## Local development
 
@@ -17,6 +17,6 @@ The development settings use local SQLite and console email. Create a local admi
 
 ## Coolify deployment
 
-Deploy this repository using its root [Dockerfile](Dockerfile) and expose container port `8000`. The container uses production settings, applies migrations, collects static files, and serves the application with Waitress and WhiteNoise. Configure PostgreSQL, HTTPS domain, SMTP, and required secrets in Coolify.
+Deploy this repository using its root [Dockerfile](Dockerfile) and expose container port `8000`. The container uses production settings, applies migrations, collects static files, and serves the application with Waitress and WhiteNoise. Configure a persistent volume for SQLite (or PostgreSQL), the HTTPS domain, SMTP, and required secrets in Coolify.
 
 See the [Coolify deployment guide](docs/DEPLOYMENT.md) for the full setup and environment-variable list. Never commit production secrets or use development settings on a public deployment.

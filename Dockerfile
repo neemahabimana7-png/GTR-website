@@ -7,7 +7,9 @@ ENV PYTHONDONTWRITEBYTECODE=1 \
 WORKDIR /app
 
 RUN groupadd --system django \
-    && useradd --system --gid django --home-dir /app django
+    && useradd --system --gid django --home-dir /app django \
+    && mkdir -p /data \
+    && chown django:django /data
 
 COPY requirements/production.txt requirements/base.txt ./requirements/
 RUN pip install --no-cache-dir -r requirements/production.txt
