@@ -8,6 +8,11 @@ DEBUG = False
 SECRET_KEY = required('SECRET_KEY')
 if len(SECRET_KEY) < 50:
     raise ImproperlyConfigured('Use a unique production SECRET_KEY of at least 50 characters.')
+MIDDLEWARE.insert(1, 'whitenoise.middleware.WhiteNoiseMiddleware')
+STORAGES = {
+    'default': {'BACKEND': 'django.core.files.storage.FileSystemStorage'},
+    'staticfiles': {'BACKEND': 'whitenoise.storage.CompressedStaticFilesStorage'},
+}
 ALLOWED_HOSTS = csv('ALLOWED_HOSTS')
 CSRF_TRUSTED_ORIGINS = csv('CSRF_TRUSTED_ORIGINS')
 if not ALLOWED_HOSTS or '*' in ALLOWED_HOSTS:

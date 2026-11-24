@@ -1,47 +1,70 @@
-# Production deployment preparation — not deployed
+# Deploying on Coolify
 
-No public deployment, domain change, server creation or live email delivery was performed. Deployment requires explicit authorization and actual hosting/domain/email decisions.
+The repository is ready to deploy as a Dockerfile-based Coolify application. No server, domain, database, or live email account has been configured from this repository.
 
-## Install and configure
+## 1. Create the application
 
-Create a fresh environment on the target host. Install `requirements/production.txt` (Django, Psycopg PostgreSQL driver and Waitress). Keep production secrets in the host's secret manager or a private `.env`. Choose `config.settings.production` in the process environment or command; do not select it from `.env`.
+1. In Coolify, create a resource from this Git repository and select **Dockerfile** as the build pack.
+2. Set the Dockerfile path to `Dockerfile` and the build context to the repository root.
+3. Configure the application to expose port `8000`. The container listens on `8000` by default; only set `PORT` if you also configure Coolify to expose that same port.
+4. Attach or create a PostgreSQL service on the private Coolify network. Use that service's internal hostname, database name, user, and password—not `localhost`.
+5. Add your domain in Coolify and enable its HTTPS certificate/proxy.
 
-Required configuration:
+At startup the container applies migrations, collects static assets, then starts Waitress. WhiteNoise serves `/static/` from the collected directory. Coolify redeploys therefore require a reachable database before the container becomes ready.
 
-- `SECRET_KEY`: unique random private value, at least 50 characters. Generate locally; never paste it into documentation or source control.
-- `ALLOWED_HOSTS`: actual approved hostnames, comma-separated; no wildcard.
-- `CSRF_TRUSTED_ORIGINS`: HTTPS origins when required by the deployed origin/proxy arrangement.
-- `DB_NAME`, `DB_USER`, `DB_PASSWORD`, `DB_HOST`, optional `DB_PORT`.
-- `DB_SSLMODE`: defaults to `verify-full`. Install the provider's CA or configure its certificate requirements. Any weaker mode requires an explicit infrastructure decision.
-- `EMAIL_HOST`, port/TLS/SSL, provider username/password when needed.
-- `DEFAULT_FROM_EMAIL`: approved verified sender. `CONTACT_RECIPIENTS`: approved company recipients.
-- `TRUST_HTTPS_PROXY=true` only behind a trusted HTTPS-terminating proxy.
+## 2. Add environment variables
 
-```powershell
-$env:DJANGO_SETTINGS_MODULE = "config.settings.production"
-.\.venv\Scripts\python.exe manage.py check --deploy
-.\.venv\Scripts\python.exe manage.py migrate --noinput
-.\.venv\Scripts\python.exe manage.py collectstatic --noinput
-.\.venv\Scripts\waitress-serve.exe --listen=127.0.0.1:8000 config.wsgi:application
+Add these as Coolify runtime environment variables/secrets. Do not commit them or put real credentials in `.env.example`.
+
+| Variable | Value |
+| --- | --- |
+| `DJANGO_SETTINGS_MODULE` | `config.settings.production` |
+| `SECRET_KEY` | Unique random secret, at least 50 characters |
+| `ALLOWED_HOSTS` | Domain name(s), comma-separated, no scheme (for example `www.example.com,example.com`) |
+| `CSRF_TRUSTED_ORIGINS` | HTTPS origin(s), comma-separated (for example `https://www.example.com,https://example.com`) |
+| `DB_NAME` | PostgreSQL database name |
+| `DB_USER` | Restricted PostgreSQL application user |
+| `DB_PASSWORD` | PostgreSQL application password |
+| `DB_HOST` | Internal hostname of the Coolify PostgreSQL service |
+| `DB_PORT` | `5432`, unless the database service specifies another port |
+| `DB_SSLMODE` | Use `disable` only for private Coolify PostgreSQL traffic without TLS; otherwise use `verify-full` and configure the required CA support |
+| `EMAIL_HOST` | SMTP server hostname |
+| `EMAIL_PORT` | SMTP port (typically `587` for STARTTLS) |
+| `EMAIL_HOST_USER` | SMTP username |
+| `EMAIL_HOST_PASSWORD` | SMTP password |
+| `EMAIL_USE_TLS` | `true` for STARTTLS, or `false` when using implicit SSL |
+| `EMAIL_USE_SSL` | `false` for STARTTLS, or `true` for implicit SSL |
+| `DEFAULT_FROM_EMAIL` | Verified sender address for your domain |
+| `CONTACT_RECIPIENTS` | Approved inquiry recipient address(es), comma-separated |
+| `TRUST_HTTPS_PROXY` | Set to `true` for the HTTPS domain routed through Coolify's proxy; leave `false` if the app is not behind a trusted HTTPS-terminating proxy |
+
+Generate `SECRET_KEY` locally, for example with `python -c "import secrets; print(secrets.token_urlsafe(48))"`. Keep it private. Do not use `*` for `ALLOWED_HOSTS`. Set exact hostnames and HTTPS origins, with no trailing slash on the origin.
+
+Do not override `DJANGO_SETTINGS_MODULE` to development settings. Do not expose the container directly to the public internet outside Coolify's proxy.
+
+## 3. First deployment and verification
+
+Deploy, then check the Coolify build/runtime logs for successful migrations and startup. Visit the HTTPS domain and confirm:
+
+- The home page loads over HTTPS.
+- CSS, images, and Django Admin assets load from `/static/`.
+- `/admin/` is reachable and an administrator you created can sign in.
+- A test contact request is saved and delivered to the configured mailbox.
+
+Create an admin using Coolify's application terminal after the first deployment:
+
+```sh
+python manage.py createsuperuser
 ```
 
-These are commands for an authorized deployment, not commands already executed against production. The production settings deliberately fail if essential values are absent. WSGI defaults to production; never run development settings on a public production server.
+Do not use a public shell or commit admin credentials. Validate SMTP delivery with a controlled test before accepting real inquiries. The app deliberately refuses to start when required production settings are absent.
 
-## Infrastructure responsibilities
+## Operations and data safety
 
-Place an HTTPS reverse proxy in front of Waitress. Serve `/static/` from `static_collected/`, including Django Admin assets. Production `runserver` static serving is not used. Forward traffic only from trusted infrastructure and configure the server to replace client/protocol headers; the app ignores arbitrary forwarded IPs. Apply upstream body limits, login/contact rate limits, logging controls and access restrictions. Choose a single authenticated proxy configuration specific to the host rather than copying a wildcard trust setting.
+- Configure database backups and monitor both the app and PostgreSQL service. Test restoration.
+- The database holds contact inquiries; restrict admin access and follow your approved retention policy.
+- Run `python manage.py cleanup_rate_limits` on a daily schedule if desired.
+- The entrypoint runs migrations at each container start. For multi-replica deployments, serialize deployments/migrations or use a separate controlled migration step.
+- Roll back application code only when it is compatible with the database schema already migrated.
 
-Use a restricted PostgreSQL application role and private connectivity. Configure provider backups and monitoring. Run tests on PostgreSQL in staging; local SQLite tests do not establish production concurrency or database compatibility. Validate email through a staging mailbox, including failure and retry behavior, before opening the contact form publicly.
-
-## Release checklist
-
-1. Approve the domain, host, recipient, sender, administrators and inquiry retention period.
-2. Back up the database and current release.
-3. Install pinned dependencies in an isolated environment; review updates.
-4. Run automated tests and frontend verification against the agreed baseline.
-5. Apply migrations and collect static files.
-6. Run production deployment checks and test HTTPS, admin access, static files and contact submission.
-7. Schedule `cleanup_rate_limits` daily and monitored notification retry if desired; commands are included, no OS schedule was created.
-8. Verify rollback and restoration procedures. Roll code back only with database-compatible migrations; do not delete real inquiries.
-
-The repository keeps frontend source for reference. The web server must expose only Django routes and collected static files, never `.env`, `.local`, the full project tree, backup archives or Git metadata.
+For local production-setting checks and general deployment guidance, keep the production-only environment values out of source control and use Coolify's secret management.
