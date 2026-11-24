@@ -15,7 +15,9 @@ COPY requirements/production.txt requirements/base.txt ./requirements/
 RUN pip install --no-cache-dir -r requirements/production.txt
 
 COPY --chown=django:django . .
-RUN chmod +x /app/scripts/docker-entrypoint.sh
+RUN chmod +x /app/scripts/docker-entrypoint.sh \
+    && mkdir -p /app/static_collected \
+    && chown django:django /app/static_collected
 
 USER django
 EXPOSE 8000
